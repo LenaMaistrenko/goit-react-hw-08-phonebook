@@ -1,0 +1,9 @@
+.navlist {
+  display: flex;
+  gap: 30px;
+}
+.navreg {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}

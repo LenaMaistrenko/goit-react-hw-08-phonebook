@@ -1,4 +1,8 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -7,9 +11,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* background: linear-gradient(180deg, #a8edea 0%, #fed6e3 100%); */
+  background: linear-gradient(180deg, #6a9bd8 0%, #ffb6cd 100%);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
