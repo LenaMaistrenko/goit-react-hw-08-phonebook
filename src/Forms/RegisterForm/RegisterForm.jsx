@@ -27,6 +27,7 @@ function RegisterForm({ onSubmit }) {
       <label className={css.label}>
         Username
         <input
+          className={css.forminput}
           type="text"
           name="name"
           placeholder={'Input name'}
@@ -39,6 +40,7 @@ function RegisterForm({ onSubmit }) {
       <label className={css.label}>
         Email
         <input
+          className={css.forminput}
           type="email"
           name="email"
           placeholder={'Input email'}
@@ -49,6 +51,7 @@ function RegisterForm({ onSubmit }) {
       <label className={css.label}>
         Password
         <input
+          className={css.forminput}
           type="password"
           name="password"
           placeholder={'Input password'}
@@ -58,7 +61,11 @@ function RegisterForm({ onSubmit }) {
           required
         />
       </label>
-      <button type="submit" disabled={status === 'pending'}>
+      <button
+        type="submit"
+        disabled={status === 'pending'}
+        className={css.formbtn}
+      >
         {status === 'pending' && <Loader />}
         Register
       </button>

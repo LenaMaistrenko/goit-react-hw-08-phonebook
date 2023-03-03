@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginRequest } from 'redux/UserSlice/UserSlice';
 import { selectIsLoggedIn } from 'redux/UserSlice/selectors';
+import css from '../../components/Layout/Layout.module.css';
 
 export default function LogInPage() {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export default function LogInPage() {
     <>
       <section>
         <div>
-          <h1>LogInPage</h1>
+          <h1 className={css.navtext}>LogInPage</h1>
           <LoginForm onSubmit={handleLogIn} />
         </div>
       </section>

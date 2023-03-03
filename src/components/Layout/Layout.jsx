@@ -27,23 +27,27 @@ export default function Layout() {
       {' '}
       <header>
         <div>
-          <nav>
+          <nav className={css.navtext}>
             {' '}
             {isLoggedIn ? (
-              <>
+              <div className={css.navtext}>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="contacts">Contacts</NavLink>
-                <span>Hello, {userData.name}</span>
-                <button onClick={handleLogOut}>Logout</button>
-              </>
+                <div>
+                  <span>Hello, {userData.name}</span>
+                  <button onClick={handleLogOut} className={css.navbtn}>
+                    Logout
+                  </button>
+                </div>
+              </div>
             ) : (
-              <>
+              <div className={css.navtext}>
                 <NavLink to={'/'}>Home</NavLink>
                 <div className={css.navreg}>
                   <NavLink to="login">Login</NavLink>
                   <NavLink to="register">Register</NavLink>
                 </div>
-              </>
+              </div>
             )}
           </nav>
         </div>

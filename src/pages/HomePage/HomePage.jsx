@@ -1,11 +1,10 @@
+import css from '../../components/Layout/Layout.module.css';
 export default function HomePage() {
   return (
     <>
       <section>
-        <div>
-          <h1>Phonebook</h1>
-          <p>Hi, let's go... </p>
-        </div>
+        <h1 className={css.navtext}>Phonebook</h1>
+        <p className={css.navtext}>Hi, let's go... </p>
       </section>
     </>
   );

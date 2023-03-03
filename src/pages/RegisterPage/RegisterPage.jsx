@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { registerRequest } from 'redux/UserSlice/UserSlice';
 import { selectIsLoggedIn } from 'redux/UserSlice/selectors';
+import css from '../../components/Layout/Layout.module.css';
 
 export default function RegisterPage() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ export default function RegisterPage() {
     <>
       <section>
         <div>
-          <h1>RegisterPage</h1>
+          <h1 className={css.navtext}>RegisterPage</h1>
           <RegisterForm onSubmit={handleRegister} />
         </div>
       </section>

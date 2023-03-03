@@ -25,6 +25,7 @@ function LoginForm({ onSubmit }) {
       <label className={css.label}>
         Email
         <input
+          className={css.forminput}
           type="email"
           name="email"
           placeholder={'Input email'}
@@ -34,6 +35,7 @@ function LoginForm({ onSubmit }) {
       <label className={css.label}>
         Password
         <input
+          className={css.forminput}
           type="password"
           name="password"
           placeholder={'Input password'}
