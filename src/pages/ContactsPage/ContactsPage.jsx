@@ -3,12 +3,10 @@ import { ContactList } from '../../components/ContactList/ContactList';
 import { Filter } from '../../components/Filter/Filter';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { addContact, fetchContacts } from '../../redux/contactsOperations';
+import { addContact } from '../../redux/contactsOperations';
 import css from './ContactsPage.module.css';
-import { selectIsLoggedIn } from 'redux/UserSlice/selectors';
 
 import {
-  selectContactError,
   selectContactStatus,
   selectContacts,
 } from 'redux/ContactsSlice/selectors';
@@ -18,10 +16,8 @@ import WithAuthRedirect from 'HOC/WithAuthRedirect';
 
 function ContactsPage() {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
   const contacts = useSelector(selectContacts);
   const status = useSelector(selectContactStatus);
-  const error = useSelector(selectContactError);
 
   const handleSubmit = formData => {
     dispatch(addContact(formData));
