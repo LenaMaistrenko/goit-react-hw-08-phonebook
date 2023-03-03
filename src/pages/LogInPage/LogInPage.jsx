@@ -9,7 +9,6 @@ export default function LogInPage() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const navigate = useNavigate();
-  console.log('bbbbbb', isLoggedIn);
   useEffect(() => {
     if (!isLoggedIn) return;
     navigate('/contacts');

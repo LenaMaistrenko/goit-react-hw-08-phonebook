@@ -1,40 +1,26 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import css from './ContactForm.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { addContact } from 'redux/contactsOperations';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import { selectStatus } from 'redux/UserSlice/selectors';
 import { addContactRequest } from 'redux/ContactsSlice/ContactSlice';
-import { selectContacts } from 'redux/ContactsSlice/selectors';
 
 export function ContactForm({ onSubmit }) {
-  // const [name, setName] = useState('');
-  // const [number, setNumber] = useState('');
-  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
   const nameInputRef = useRef();
   const phoneInputRef = useRef();
-  const status = useSelector(selectStatus);
 
   const handleSubmit = event => {
     event.preventDefault();
-
     const formData = {
       name: nameInputRef.current.value,
       number: phoneInputRef.current.value,
     };
     dispatch(addContactRequest(formData));
-    console.log('formData', formData);
-    // onSubmit(formData);
-
     event.target.reset();
   };
 
   return (
     <form onSubmit={handleSubmit} className={css.contactform}>
-      {/* <h2>Add contact</h2> */}
       <label className={css.formlabel}>
         Name :
         <input

@@ -10,7 +10,6 @@ import {
 
 export default function Layout() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  console.log(isLoggedIn);
   const dispatch = useDispatch();
   const userData = useSelector(selectUserData);
   const handleLogOut = () => {

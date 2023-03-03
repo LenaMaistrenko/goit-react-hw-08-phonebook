@@ -1,10 +1,5 @@
-import ContactsPage from 'pages/ContactsPage/ContactsPage';
-import { NavLink, Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import css from './App.module.css';
-import HomePage from 'pages/HomePage/HomePage';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
-import LogInPage from 'pages/LogInPage/LogInPage';
-import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import { Suspense, lazy } from 'react';
 
 export function App() {
